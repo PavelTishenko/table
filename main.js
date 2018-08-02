@@ -66,7 +66,7 @@
   
           }    
               
-        //      changeColorClick on <td> 
+        //      changeColorClick on <td> .
           document.querySelector("tbody").addEventListener("click", function(event) {
                 var td = event.target;
                 td.style.background = getRandomColor();
