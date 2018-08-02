@@ -13,19 +13,19 @@
           function getRandomColor(){
                   var hex = Math.floor(Math.random() * 0xFFFFFF);
                   return "#" + ("000000" + hex.toString(16)).substr(-6);
-          }  
-  
+          } 
+
           for (var i = 0; i < 10; i++){
                   var tr = document.createElement('TR');
                   tblB.appendChild(tr);
-                  tr.addEventListener('click', getRandomColor);
+                  
   
                   for(var j = 0; j < 10; j++){
                           var td = document.createElement('TD');
                           td.textContent = randomNumber(1, 99);
                           tr.appendChild(td);       
                   }
-          }
+          } 
           body.appendChild(table);        
           console.log(tblB.rows.length);
              
@@ -64,11 +64,14 @@
             for (var d = 0, c = tblB.rows.length - 1; d < tblB.rows.length , c > 1 ; c--, d++) {
                   tblB.rows[d + 1].cells[c - 1].textContent = 'cool';
   
-          }
-
-          
-
-  }
- 
+          }    
+              
+             
+          document.querySelector("tbody").addEventListener("click", function(event) {
+                var td = event.target;
+                td.style.background = getRandomColor();
+  })
+        
+}    
 
  
