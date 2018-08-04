@@ -69,7 +69,8 @@
         //      changeColorClick on <td> .
           document.querySelector("tbody").addEventListener("click", function(event) {
                 var td = event.target;
-                td.style.background = getRandomColor();
+                td.nextSibling.style.background = getRandomColor();
+                td.previousSibling.style.background = getRandomColor();
                 // event.currentTarget.style.background = getRandomColor(); 
                 // console.log(event.currentTarget);
                         if(td.tagName != 'td'){return} // if target not td
