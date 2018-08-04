@@ -70,7 +70,11 @@
           document.querySelector("tbody").addEventListener("click", function(event) {
                 var td = event.target;
                 td.style.background = getRandomColor();
-  })
+                // event.currentTarget.style.background = getRandomColor(); 
+                // console.log(event.currentTarget);
+                        if(td.tagName != 'td'){return}
+                
+                 })
         
 }    
 
